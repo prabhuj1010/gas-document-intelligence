@@ -213,6 +213,18 @@ Document example JSON payloads, error responses and required validations in Open
 - Do not invent executed tests, working integrations, or Cloudflare configuration.
 - Ask for missing critical configuration (OS, RAM, GPU, Docker availability, approval to use Cloudflare) only when it blocks implementation; otherwise use safe local defaults.
 - Put secrets in `.env` (gitignored), provide `.env.example`, never commit credentials.
+- **Git branching (standing rule, set by the owner on 2026-10-25):**
+  - Never commit directly to `main`.
+  - Create a new branch from an up-to-date `main` for each day or change:
+    - `day-N/<short-topic>` for daily work, e.g. `day-2/pdf-upload`
+    - `fix/<topic>`, `docs/<topic>` or `chore/<topic>` for other changes
+  - After committing, **always push the branch** to `origin` with upstream tracking (`git push -u origin <branch>`).
+  - **The owner reviews and merges.** The owner reviews each pushed branch with GitHub Copilot, fixes any bugs found, and merges into `main` themselves.
+    - Claude never merges into `main`, and opens a pull request or deletes a branch only when asked.
+    - Review fixes for a branch go on that same branch, then get pushed again.
+  - Before starting a new branch, run `git fetch` and update `main` to pick up the owner's merges and fixes.
+    - If the previous branch hasn't been merged yet, ask whether to wait or to branch from it.
+  - Never force-push to `main`.
 - Avoid autonomous deployment, paid services, external data uploads and irreversible operations without explicit consent.
 - Keep `README.md` current with installation, demo workflow, limitations and next steps.
 - Keep a short `PROGRESS.md` with completed work, blockers and the single next task to make short Pro-plan coding sessions effective.
