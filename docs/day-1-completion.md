@@ -6,7 +6,7 @@
 | **Day** | 1 of 7 |
 | **Date** | 2026-10-25 |
 | **Status** | ✅ Complete. All Day 1 scope is delivered and verified. |
-| **Repository** | https://github.com/prabhuj1010/gas-document-intelligence (remote set; not yet committed or pushed) |
+| **Repository** | https://github.com/prabhuj1010/gas-document-intelligence (`main`, Day 1 commit 18d4584) |
 
 ---
 
@@ -170,7 +170,7 @@ First-time setup (venv creation, `pip install`, `npm install`) is in `README.md`
 | Other containers (`rpf-db-1`, `rpf-redis-1`, `rpf-objectstore-1`, `pias-postgres`) running | They take RAM on the 8 GB machine | Stop them during GAS work and demos |
 | `fastapi.testclient` deprecation warning about `httpx` | None, cosmetic | Revisit when upgrading FastAPI |
 | Headless Edge can't render narrower than about 500px | A testing quirk, not an app bug | The phone layout was verified at 600px instead |
-| Code not yet committed or pushed | No remote backup yet | Make the first commit and push on approval |
+| Code committed and pushed to GitHub (`main`, 18d4584) | Resolved | — |
 
 ## 10. Acceptance criteria progress (CLAUDE.md §13)
 

@@ -3,7 +3,7 @@
 ## Done
 
 ### Day 1 (2026-10-25): scaffold
-- Set up the repo with `.gitignore`, `.env.example` and CLAUDE.md. The remote is `origin`, pointing to github.com/prabhuj1010/gas-document-intelligence. Nothing has been pushed yet.
+- Set up the repo with `.gitignore`, `.env.example` and CLAUDE.md. Pushed to github.com/prabhuj1010/gas-document-intelligence (`main`, commit 18d4584).
 - Docker Compose runs `pgvector/pgvector:pg16` on `127.0.0.1:5433`. The pgvector extension is created by `database/init/001_extensions.sql`.
 - FastAPI has `GET /api/health`, which reports API, database and pgvector status (503 if the database is down) and whether Ollama is configured. CORS uses an allow-list, and OpenAPI docs are at `/docs`.
 - The React + Vite + TS PWA has Dashboard (live health), Upload, Documents and Chat routes. It has a manifest, icons and a service worker that caches only the app shell. Navigation is a sidebar on desktop and a bottom tab bar on phones.
