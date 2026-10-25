@@ -1,0 +1,4 @@
+-r requirements.txt
+# Test-only (pytest MIT, httpx BSD-3 — required by FastAPI's TestClient)
+pytest==9.1.1
+httpx==0.28.1
