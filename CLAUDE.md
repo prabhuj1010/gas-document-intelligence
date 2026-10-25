@@ -219,7 +219,11 @@ Document example JSON payloads, error responses and required validations in Open
     - `day-N/<short-topic>` for daily work, e.g. `day-2/pdf-upload`
     - `fix/<topic>`, `docs/<topic>` or `chore/<topic>` for other changes
   - After committing, **always push the branch** to `origin` with upstream tracking (`git push -u origin <branch>`).
-  - Merging into `main`, opening a pull request, or deleting a branch happens only when the owner asks.
+  - **The owner reviews and merges.** The owner reviews each pushed branch with GitHub Copilot, fixes any bugs found, and merges into `main` themselves.
+    - Claude never merges into `main`, and opens a pull request or deletes a branch only when asked.
+    - Review fixes for a branch go on that same branch, then get pushed again.
+  - Before starting a new branch, run `git fetch` and update `main` to pick up the owner's merges and fixes.
+    - If the previous branch hasn't been merged yet, ask whether to wait or to branch from it.
   - Never force-push to `main`.
 - Avoid autonomous deployment, paid services, external data uploads and irreversible operations without explicit consent.
 - Keep `README.md` current with installation, demo workflow, limitations and next steps.
